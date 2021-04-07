@@ -9,7 +9,7 @@ import FAQ from "../components/FAQ";
 const Styles = styled.div`
   .middle {
     background-color: #fff;
-    padding: 40px 0;
+    padding: 40px 0 0 0;
   }
 
   .middle-links a {
