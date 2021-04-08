@@ -8,6 +8,7 @@ import { NavigationBar } from './components/NavigationBar';
 import { Jumbotron } from './components/Jumbotron';
 import FooterPage from './components/Footer';
 import { Register } from './screens/Register';
+import { Signin } from './screens/Signin';
 
 class App extends Component {
   render() {
@@ -22,6 +23,7 @@ class App extends Component {
               <Route path="/about" component={About} />
               <Route path="/contact" component={Contact} />
               <Route path="/register" component={Register} />
+              <Route path="/signin" component={Signin} />
               <Route component={NoMatch} />
           </Switch>
           <FooterPage />

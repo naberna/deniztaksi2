@@ -57,7 +57,7 @@ export default function Cart() {
               bulk of the card's content.
             </div>
             <div className="col-6 mt-auto">
-              <button type="submit" className="btn btn-second">
+              <button type="submit" className="btn button-second">
                 Kirala
               </button>
             </div>

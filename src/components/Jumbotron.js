@@ -10,6 +10,7 @@ const Styles = styled.div`
     height: 400px;
     padding: 0;
     position: relative;
+    margin: 0;
   }
 
   .overlay {
@@ -19,7 +20,6 @@ const Styles = styled.div`
     bottom: 0;
     right: 0;
     z-index: 0;
-    margin-right: 20px;
   }
 
   .top-part {

@@ -17,7 +17,7 @@ const Styles = styled.div`
     margin-top: 40px;
   }
 
-  .btn-group .btn-secondary {
+  .btn-group {
     background-color: #fff;
     border-color: #fff;
     color: #132968;
@@ -102,7 +102,7 @@ export const TravelForm = () => (
               <SimpleDatePicker/>
             </div>
             <div className="col-4">
-              <button type="submit" class="btn btn-primary">
+              <button type="submit" class="btn button-primary">
                 Rezervasyon Yap
               </button>
             </div>

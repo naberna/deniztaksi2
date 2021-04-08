@@ -6,9 +6,10 @@ import { FiPhoneCall, FiMail, FiMap } from "react-icons/fi";
 const Styles = styled.div`
   background-color: #fff;
 
-  .contact {
-    padding: 0 0 20px 0;
+  .content {
+    padding: 40px 0;
   }
+
   .contact-info {
     padding: 20px 0;
     text-align: center;
@@ -28,11 +29,11 @@ const Styles = styled.div`
   .mark1 {
     background-color: #fde1d1;
   }
-  
+
   .mark2 {
     background-color: #dfe3ff;
   }
-  
+
   .mark3 {
     background-color: #d7ffed;
   }
@@ -57,77 +58,85 @@ export const Contact = () => (
   <Styles>
     <Container>
       <div className="contact">
-        <h4 className="title">İletişim</h4>
-        <div className="row contact-info">
-          <div className="col-12 col-md-4 col-lg-4 col-xl-4">
-            <div><FiPhoneCall/></div>
-            <div className="mark1">Telefon Numarası</div>
-            <div className="info">0850 000 00 00</div>
+        <div className="content">
+          <h4 className="title">İletişim</h4>
+          <div className="row contact-info">
+            <div className="col-12 col-md-4 col-lg-4 col-xl-4">
+              <div>
+                <FiPhoneCall />
+              </div>
+              <div className="mark1">Telefon Numarası</div>
+              <div className="info">0850 000 00 00</div>
+            </div>
+            <div className="col-12 col-md-4 col-lg-4 col-xl-4">
+              <div>
+                <FiMail />
+              </div>
+              <div className="mark2">E-mail</div>
+              <div className="info">example@deniztaksi.com</div>
+            </div>
+            <div className="col-12 col-md-4 col-lg-4 col-xl-4">
+              <div>
+                <FiMap />
+              </div>
+              <div className="mark3">Adres</div>
+              <div className="info">Example Address</div>
+            </div>
           </div>
-          <div className="col-12 col-md-4 col-lg-4 col-xl-4">
-            <div><FiMail/></div>
-            <div className="mark2">E-mail</div>
-            <div className="info">example@deniztaksi.com</div>
-          </div>
-          <div className="col-12 col-md-4 col-lg-4 col-xl-4">
-            <div><FiMap/></div>
-            <div className="mark3">Adres</div>
-            <div className="info">Example Address</div>
-          </div>
-        </div>
-        <div className="contact-form">
-          <form>
-            <div className="row">
-              <div className="col-12 col-md-8 col-lg-8 col-xl-8">
-                <h5 className="sub-title">İletişim Formu</h5>
-                <div className="row">
-                  <div class="col-12 col-md-6 col-lg-6 col-xl-6">
-                    <input
-                      name="name-surname"
-                      placeholder="Adınız Soyadınız"
-                      className="form-control"
-                    />
-                  </div>
-                  <div class="col-12 col-md-6 col-lg-6 col-xl-6">
-                    <input
-                      name="phone"
-                      placeholder="Telefon Numarası"
-                      className="form-control"
-                    />
-                  </div>
-                  <div class="col-12 col-md-6 col-lg-6 col-xl-6">
-                    <input
-                      name="mail"
-                      placeholder="Mail Adresiniz"
-                      className="form-control"
-                    />
-                  </div>
-                  <div class="col-12 col-md-6 col-lg-6 col-xl-6">
-                    <input
-                      name="subject"
-                      placeholder="İletişim Konusu"
-                      className="form-control"
-                    />
-                  </div>
-                  <div class="col-12">
-                    <textarea
-                      id="textArea"
-                      placeholder="Mesajınız"
-                      rows="4"
-                    ></textarea>
-                  </div>
-                  <div className="col-4">
-                    <button type="submit" class="btn btn-primary">
-                      Formu Tamamla
-                    </button>
+          <div className="contact-form">
+            <form>
+              <div className="row">
+                <div className="col-12 col-md-8 col-lg-8 col-xl-8">
+                  <h5 className="sub-title">İletişim Formu</h5>
+                  <div className="row">
+                    <div class="col-12 col-md-6 col-lg-6 col-xl-6">
+                      <input
+                        name="name-surname"
+                        placeholder="Adınız Soyadınız"
+                        className="form-control"
+                      />
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6 col-xl-6">
+                      <input
+                        name="phone"
+                        placeholder="Telefon Numarası"
+                        className="form-control"
+                      />
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6 col-xl-6">
+                      <input
+                        name="mail"
+                        placeholder="Mail Adresiniz"
+                        className="form-control"
+                      />
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6 col-xl-6">
+                      <input
+                        name="subject"
+                        placeholder="İletişim Konusu"
+                        className="form-control"
+                      />
+                    </div>
+                    <div class="col-12">
+                      <textarea
+                        id="textArea"
+                        placeholder="Mesajınız"
+                        rows="4"
+                      ></textarea>
+                    </div>
+                    <div className="col-4">
+                      <button type="submit" class="btn button-primary">
+                        Formu Tamamla
+                      </button>
+                    </div>
                   </div>
                 </div>
+                <div class="col-12 col-md-4 col-lg-4 col-xl-4">
+                  <h5 class="sub-title">Neredeyiz?</h5>
+                </div>
               </div>
-              <div class="col-12 col-md-4 col-lg-4 col-xl-4">
-                <h5 class="sub-title">Neredeyiz?</h5>
-              </div>
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
       </div>
     </Container>
