@@ -1,5 +1,5 @@
 import React from "react";
-import { Jumbotron as Jumbo } from "react-bootstrap";
+import { Container, Jumbotron as Jumbo } from "react-bootstrap";
 import styled from "styled-components";
 import { TravelForm } from "../components/forms/TravelForm";
 
@@ -28,7 +28,7 @@ const Styles = styled.div`
   }
 
   .bottom-part {
-    background-color: #235ACE;
+    background-color: #235ace;
     height: 125px;
   }
 `;
@@ -39,53 +39,55 @@ export const Jumbotron = () => (
       <div className="overlay">
         <TravelForm />
         <div className="top-part"></div>
-        <div className="bottom-part">
-          <div className="boat">
-            <div className="wrap">
-              <div className="main">
-                <div className="boat-top-layer">
-                  <div className="top">
-                    <div className="pole"></div>
-                    <div className="help">
-                      <span></span>
+          <div className="bottom-part">
+            <Container>
+            <div className="boat">
+              <div className="wrap">
+                <div className="main">
+                  <div className="boat-top-layer">
+                    <div className="top">
+                      <div className="pole"></div>
+                      <div className="help">
+                        <span></span>
+                      </div>
                     </div>
+                    <div className="bottom"></div>
                   </div>
-                  <div className="bottom"></div>
+                  <div className="boat-mid-layer">
+                    <div className="top"></div>
+                    <div className="bottom"></div>
+                  </div>
+                  <div className="boat-bot-layer">
+                    <div className="top"></div>
+                    <div className="bottom"></div>
+                  </div>
                 </div>
-                <div className="boat-mid-layer">
-                  <div className="top"></div>
-                  <div className="bottom"></div>
+              </div>
+              <div className="water">
+                <div className="drops clearfix drops-1">
+                  <span className="drop drop-a"></span>
+                  <span className="drop drop-b"></span>
+                  <span className="drop drop-c"></span>
+                  <span className="drop drop-d"></span>
+                  <span className="drop drop-e"></span>
+                  <span className="drop drop-f"></span>
+                  <span className="drop drop-g"></span>
+                  <span className="drop drop-h"></span>
                 </div>
-                <div className="boat-bot-layer">
-                  <div className="top"></div>
-                  <div className="bottom"></div>
+                <div className="drops clearfix drops-2">
+                  <span className="drop drop-a"></span>
+                  <span className="drop drop-b"></span>
+                  <span className="drop drop-c"></span>
+                  <span className="drop drop-d"></span>
+                  <span className="drop drop-e"></span>
+                  <span className="drop drop-f"></span>
+                  <span className="drop drop-g"></span>
+                  <span className="drop drop-h"></span>
                 </div>
               </div>
             </div>
-            <div className="water">
-              <div className="drops clearfix drops-1">
-                <span className="drop drop-a"></span>
-                <span className="drop drop-b"></span>
-                <span className="drop drop-c"></span>
-                <span className="drop drop-d"></span>
-                <span className="drop drop-e"></span>
-                <span className="drop drop-f"></span>
-                <span className="drop drop-g"></span>
-                <span className="drop drop-h"></span>
-              </div>
-              <div className="drops clearfix drops-2">
-                <span className="drop drop-a"></span>
-                <span className="drop drop-b"></span>
-                <span className="drop drop-c"></span>
-                <span className="drop drop-d"></span>
-                <span className="drop drop-e"></span>
-                <span className="drop drop-f"></span>
-                <span className="drop drop-g"></span>
-                <span className="drop drop-h"></span>
-              </div>
-            </div>
+            </Container>
           </div>
-        </div>
       </div>
     </Jumbo>
   </Styles>

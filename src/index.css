@@ -58,6 +58,64 @@ textarea {
   font-size: 14px;
 }
 
+/* Base for label styling */
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+  position: absolute;
+  left: 0;
+  opacity: 0.01;
+}
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+  position: relative;
+  padding-left: 2.3em;
+  font-size: 1.05em;
+  line-height: 1.7;
+  cursor: pointer;
+}
+
+/* checkbox aspect */
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1.4em;
+  height: 1.4em;
+  border: 1px solid #ad9c70;
+  background: #FFF;
+  border-radius: .2em;
+  margin-top: 2px;
+}
+
+/* checked mark aspect */
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+  content: '✕';
+  position: absolute;
+  top: .525em;
+  left: .18em;
+  font-size: 1.375em;
+  color: #ad9c70;
+  line-height: 0;
+  -webkit-transition: all .2s;
+      transition: all .2s;
+}
+
+/* checked mark aspect changes */
+[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  -webkit-transform: scale(0) rotate(45deg);
+      transform: scale(0) rotate(45deg);
+}
+
+[type="checkbox"]:checked + label:after {
+  opacity: 1;
+  -webkit-transform: scale(1) rotate(0);
+      transform: scale(1) rotate(0);
+}
+
 .btn-primary {
   background-color: #ff9a8d;
   border-color: #ff9a8d;
@@ -146,10 +204,9 @@ select option {
 
 .boat{
 	top:50%;
-	left:25%;
 	margin-top:-75px;
 	position:absolute;
-	margin-left:-105px;
+	margin-left:120px;
 	transform: scaleX(-1);
 }
 .boat .wrap{

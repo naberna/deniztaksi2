@@ -4,7 +4,8 @@ import MiddleCarts from "../components/MiddleCarts";
 import styled from "styled-components";
 import { Container } from "react-bootstrap";
 import { About } from "./About";
-import FAQ from "../components/FAQ";
+import { FAQ } from "../components/FAQ";
+import { SimpleCarousel } from "../components/SimpleCarousel";
 
 const Styles = styled.div`
   .middle {
@@ -51,6 +52,7 @@ export const Home = () => (
         </div>
       </Container>
     </div>
+    <SimpleCarousel/>
     <About/>
     <FAQ/>
   </Styles>

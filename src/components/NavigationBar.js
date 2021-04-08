@@ -70,8 +70,8 @@ export const NavigationBar = () => (
                     <CgProfile className="icon"/>
                   </Dropdown.Toggle>
                   <Dropdown.Menu>
-                    <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                    <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                    <Dropdown.Item href="#/action-2">Giriş Yap</Dropdown.Item>
+                    <Dropdown.Item href="kayit">Kayıt Ol</Dropdown.Item>
                     <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
                     <Dropdown.Divider />
                     <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>

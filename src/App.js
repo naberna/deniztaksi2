@@ -7,6 +7,7 @@ import { NoMatch } from './screens/NoMatch';
 import { NavigationBar } from './components/NavigationBar';
 import { Jumbotron } from './components/Jumbotron';
 import FooterPage from './components/Footer';
+import { Register } from './screens/Register';
 
 class App extends Component {
   render() {
@@ -20,6 +21,7 @@ class App extends Component {
               <Route exact path="/" component={Home} />
               <Route path="/about" component={About} />
               <Route path="/contact" component={Contact} />
+              <Route path="/register" component={Register} />
               <Route component={NoMatch} />
           </Switch>
           <FooterPage />
