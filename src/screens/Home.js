@@ -5,7 +5,8 @@ import styled from "styled-components";
 import { Container } from "react-bootstrap";
 import { About } from "./About";
 import { FAQ } from "../components/FAQ";
-import SimpleCarousel from "../components/SimpleCarousel";
+import SimpleSlider from "../components/SimpleSlider";
+import ComplexSlider from "../components/ComplexSlider";
 
 const Styles = styled.div`
   .middle {
@@ -15,7 +16,7 @@ const Styles = styled.div`
 
   .middle-links a {
     background-color: #fff;
-    border: 1px solid #ff9a8d;
+    border: 3px solid #ff9a8d;
     color: #ff9a8d;
     font-weight: bold;
     border-radius: 8px;
@@ -54,17 +55,18 @@ export const Home = () => (
               <Link to="/">Hakkımızda</Link>
             </div>
             <div className="col-12 col-md-4 col-lg-4 col-xl-4 middle-link">
-              <Link to="/">Sıkça Sorulan Sorular</Link>
+              <Link to="/">Duraklarımız</Link>
             </div>
             <div className="col-12 col-md-4 col-lg-4 col-xl-4 middle-link">
-              <Link to="/">Duraklar</Link>
+              <Link to="/">Sıkça Sorulan Sorular</Link>
             </div>
           </div>
         </div>
       </Container>
     </div>
-    <SimpleCarousel/>
+    <SimpleSlider/>
     <About/>
+    <ComplexSlider/>
     <FAQ/>
   </Styles>
 );

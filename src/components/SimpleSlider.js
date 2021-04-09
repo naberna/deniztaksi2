@@ -32,7 +32,7 @@ const Styles = styled.div`
   }
 `;
 
-export default class SimpleCarousel extends React.Component {
+export default class SimpleSlider extends React.Component {
   render() {
     var settings = {
       dots: true,
@@ -72,7 +72,7 @@ export default class SimpleCarousel extends React.Component {
       <Styles>
         <Container>
           <div className="carousel">
-            <h4 className="title">Kiralama Seçenekleri</h4>
+            <h4 className="title">Duraklarımız</h4>
             <Slider  {...settings}>
               <Cart />
               <Cart />

@@ -50,7 +50,7 @@ export default function Cart() {
           </div>
           <div className="content">
             <h5 className="col-12 sub-title">
-              <Link to="/">Kiralama Paketi 1</Link>
+              <Link to="/">Durak 1</Link>
             </h5>
             <div className="col-12 text">
               Some quick example text to build on the card title and make up the

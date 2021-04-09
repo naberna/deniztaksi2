@@ -114,7 +114,7 @@ const Styles = styled.div`
     color: #fff;
   }
 
-  a {
+  .social a {
     display: inline-block;
     vertical-align: middle;
     transform: translateZ(0);
@@ -125,9 +125,9 @@ const Styles = styled.div`
     transition-property: transform;
   }
 
-  a:hover,
-  a:focus,
-  a:active {
+  .social a:hover,
+  .social a:focus,
+  .social a:active {
     transform: scale(1.1);
   }
 `;
