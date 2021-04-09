@@ -47,7 +47,7 @@ export default class SimpleSlider extends React.Component {
           settings: {
             slidesToShow: 3,
             slidesToScroll: 3,
-            rows: 1,
+            rows: 2,
             infinite: true,
             dots: true,
           },
