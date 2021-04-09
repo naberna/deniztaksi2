@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Container, Nav, Navbar, Dropdown, NavDropdown } from "react-bootstrap";
+import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import styled from "styled-components";
 import logo from "../assets/logo.png";
 import { CgProfile } from "react-icons/cg";
