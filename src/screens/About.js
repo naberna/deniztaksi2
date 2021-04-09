@@ -6,7 +6,6 @@ import { MdDateRange, MdDoneAll, MdDone } from "react-icons/md";
 import { BsInfoCircle } from "react-icons/bs";
 
 const Styles = styled.div`
-  padding: 40px 0;
   background-color: #fff;
 
   .vertical-process .row {

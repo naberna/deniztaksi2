@@ -16,7 +16,7 @@ background: #fff;
   height: 420px;
   background-color: #4a536b;
   color: #fff;
-  margin: 60px 0;
+  margin: 20px 0;
   padding: 30px;
   z-index: 99;
   border-radius: 20px;
@@ -36,7 +36,7 @@ background: #fff;
 }
 
 .slide {
-  margin: 40px 41%;
+  margin: 0 41%;
   width: 800px;
   height: 460px;
   background: url(${logo});

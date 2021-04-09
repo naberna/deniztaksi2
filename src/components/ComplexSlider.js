@@ -55,7 +55,6 @@ export default class SimpleSlider extends React.Component {
       <Styles>
         <Container>
           <div className="carousel">
-            <h4 className="title">Kiralama Seçenekleri</h4>
             <Slider  {...settings}>
               <ComplexCart />
               <ComplexCart />

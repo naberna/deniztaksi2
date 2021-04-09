@@ -55,7 +55,7 @@ export const Home = () => (
               <Link to="/">Hakkımızda</Link>
             </div>
             <div className="col-12 col-md-4 col-lg-4 col-xl-4 middle-link">
-              <Link to="/">Duraklarımız</Link>
+              <Link to="/stations">Duraklarımız</Link>
             </div>
             <div className="col-12 col-md-4 col-lg-4 col-xl-4 middle-link">
               <Link to="/">Sıkça Sorulan Sorular</Link>
@@ -64,9 +64,13 @@ export const Home = () => (
         </div>
       </Container>
     </div>
-    <SimpleSlider/>
-    <About/>
+    <h4 className="title">Kiralama Seçenekleri</h4>
     <ComplexSlider/>
+    <About/>
+    <h4 className="title">Duraklarımız</h4>
+    <div id="stations">
+      <SimpleSlider/>
+    </div>
     <FAQ/>
   </Styles>
 );

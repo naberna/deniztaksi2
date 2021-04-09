@@ -153,7 +153,10 @@ input[type="radio"] {
   text-decoration-color: #132968;
   text-decoration-thickness: 4px;
   text-underline-position: under;
-  padding: 20px 0;
+  padding: 40px 0;
+  text-align: center;
+  background-color: #fff;
+  margin: 0;
 }
 
 .sub-title {

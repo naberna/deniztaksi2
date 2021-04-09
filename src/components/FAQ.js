@@ -12,7 +12,7 @@ import {
 import "react-accessible-accordion/dist/fancy-example.css";
 
 const Styles = styled.div`
-  height: 500px;
+  height: 520px;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
     rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
     rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
@@ -38,6 +38,10 @@ const Styles = styled.div`
   .accordion__item {
     background-color: #fff;
     color: #000;
+  }
+
+  .f0 {
+    background-color: #f0f0f0;
   }
 
   @media screen and (max-width:768px){ 
@@ -82,7 +86,7 @@ export const FAQ = () => {
   return (
     <Styles>
       <Container>
-        <h4 className="title">Sıkça Sorulan Sorular</h4>
+        <h4 className="title f0">Sıkça Sorulan Sorular</h4>
         <Accordion allowZeroExpanded={true}>
           {FAQS.map((FAQ, index) => (
             <AccordionItem
