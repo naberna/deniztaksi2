@@ -31,6 +31,10 @@ const Styles = styled.div`
     background-color: #235ace;
     height: 125px;
   }
+
+  @media screen and (max-width:992px){ 
+    height: 670px;
+  }
 `;
 
 export const Jumbotron = () => (

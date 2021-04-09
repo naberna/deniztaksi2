@@ -46,14 +46,36 @@ const Styles = styled.div`
   .btn-group {
     margin: 10px 0;
   }
+
+  .slogan {
+    font-size: 34px;
+    font-weight: bold;
+    color: #233569;
+    font-family: Garamond, serif;
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  @media screen and (max-width:992px){ 
+    .slogan {
+      font-size: 30px;
+    }
+
+    form {
+      margin-top: 25%;
+    }
+  }
 `;
 
 export const TravelForm = () => (
   <Styles>
     <Container>
       <div className="row">
-        <div className="col-5"></div>
-        <form className="col-12 col-md-7 col-lg-7 col-xl-7 shadow p-3 mb-5 bg-white rounded">
+        <div className="col-5 slogan">
+          <div>Deniz Taksi:</div>
+          <div>7/24 Ulaşım Özgürlüğü</div>
+        </div>
+        <form className="col-sm-12 col-md-12 col-lg-7 col-xl-7 shadow p-3 mb-5 bg-white rounded">
           <div className="btn-group">
             <div>
               <select className="form-select">
