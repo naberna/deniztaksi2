@@ -72,6 +72,21 @@ const Styles = styled.div`
     vertical-align: middle;
     top: 49%;
   }
+
+  @media screen and (max-width:768px){ 
+    .line {
+      display: none;
+    }
+
+    .none {
+      display: none;
+    }
+
+    .box.right,
+    .box.left {
+      text-align: center;
+    }
+  }
 `;
 export const About = () => (
   <Styles>
@@ -79,7 +94,7 @@ export const About = () => (
       <Container>
         <h4 className="title">Hakkımızda</h4>
         <div className="row">
-          <div className="col-5 box left">
+          <div className="col-12 col-md-5 col-lg-5 col-xl-5 box left">
             <div className="icon">
               <BiMailSend />
             </div>
@@ -92,14 +107,14 @@ export const About = () => (
           <div className="col-2 line">
             <div className="circle"></div>
           </div>
-          <div className="col-5 right"></div>
+          <div className="col-5 right none"></div>
         </div>
         <div className="row">
-          <div className="col-5 left"></div>
+          <div className="col-5 left none"></div>
           <div className="col-2 line">
             <div className="circle"></div>
           </div>
-          <div className="col-5 box right">
+          <div className="col-12 col-md-5 col-lg-5 col-xl-5 box right">
             <div className="icon">
               <MdDateRange />
             </div>
@@ -109,7 +124,7 @@ export const About = () => (
           </div>
         </div>
         <div className="row">
-          <div className="col-5 box left">
+          <div className="col-12 col-md-5 col-lg-5 col-xl-5 box left">
             <div className="icon">
               <BsInfoCircle />
             </div>
@@ -122,14 +137,14 @@ export const About = () => (
           <div className="col-2 line">
             <div className="circle"></div>
           </div>
-          <div className="col-5 right"></div>
+          <div className="col-5 right none"></div>
         </div>
         <div className="row">
-          <div className="col-5 left"></div>
+          <div className="col-5 left none"></div>
           <div className="col-2 line">
             <div className="circle"></div>
           </div>
-          <div className="col-5 box right">
+          <div className="col-12 col-md-5 col-lg-5 col-xl-5 box right">
             <div className="icon">
               <MdDone />
             </div>
@@ -140,7 +155,7 @@ export const About = () => (
           </div>
         </div>
         <div className="row">
-          <div className="col-5 box left">
+          <div className="col-12 col-md-5 col-lg-5 col-xl-5 box left">
             <div className="icon">
               <MdDoneAll />
             </div>
@@ -149,7 +164,7 @@ export const About = () => (
           <div className="col-2 line">
             <div className="circle"></div>
           </div>
-          <div className="col-5 right"></div>
+          <div className="col-5 right none"></div>
         </div>
       </Container>
     </div>

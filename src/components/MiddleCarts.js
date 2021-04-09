@@ -37,6 +37,12 @@ const Styles = styled.div`
     height: 40px;
     color: #4a536b;
   }
+
+  @media screen and (max-width:768px){ 
+    .cart {
+      margin: 0;
+    }
+  }
 `;
 
 export default function MiddleCarts() {
@@ -44,7 +50,7 @@ export default function MiddleCarts() {
     <Styles>
       <Container>
         <div className="row">
-          <div className="col-4 cart">
+          <div className="col-12 col-md-4 col-lg-4 col-xl-4 cart">
             <div className="row">
               <div className="col-12">
                 <RiShipLine />
@@ -61,7 +67,7 @@ export default function MiddleCarts() {
               </div>
             </div>
           </div>
-          <div className="col-4 cart">
+          <div className="col-12 col-md-4 col-lg-4 col-xl-4 cart">
             <div className="row">
               <div className="col-12">
                 <MdLocalAirport />
@@ -80,7 +86,7 @@ export default function MiddleCarts() {
               </div>
             </div>
           </div>
-          <div className="col-4 cart">
+          <div className="col-12 col-md-4 col-lg-4 col-xl-4 cart">
             <div className="row">
               <div className="col-12">
                 <MdAirportShuttle />

@@ -30,6 +30,17 @@ const Styles = styled.div`
     background-color: #f0f0f0;
     text-decoration: none;
   }
+
+  @media screen and (max-width:768px){ 
+    .middle-link:nth-child(1),
+    .middle-link:nth-child(2) {
+      padding-bottom: 10px;
+    }
+
+    .middle-links:nth-child(1) {
+      padding-top: 0;
+    }
+  }
 `;
 
 export const Home = () => (
@@ -39,13 +50,13 @@ export const Home = () => (
       <Container>
         <div className="middle-links">
           <div className="row">
-            <div className="col-4">
+            <div className="col-12 col-md-4 col-lg-4 col-xl-4 middle-link">
               <Link to="/">Hakkımızda</Link>
             </div>
-            <div className="col-4 middle-links">
+            <div className="col-12 col-md-4 col-lg-4 col-xl-4 middle-link">
               <Link to="/">Sıkça Sorulan Sorular</Link>
             </div>
-            <div className="col-4 middle-links">
+            <div className="col-12 col-md-4 col-lg-4 col-xl-4 middle-link">
               <Link to="/">Duraklar</Link>
             </div>
           </div>

@@ -39,6 +39,10 @@ const Styles = styled.div`
     background-color: #fff;
     color: #000;
   }
+
+  @media screen and (max-width:768px){ 
+    height: 540px;
+  }
 `;
 
 export const FAQ = () => {

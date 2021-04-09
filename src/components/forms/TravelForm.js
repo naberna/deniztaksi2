@@ -53,7 +53,7 @@ export const TravelForm = () => (
     <Container>
       <div className="row">
         <div className="col-5"></div>
-        <form className="col-7 shadow p-3 mb-5 bg-white rounded">
+        <form className="col-12 col-md-7 col-lg-7 col-xl-7 shadow p-3 mb-5 bg-white rounded">
           <div className="btn-group">
             <div>
               <select className="form-select">
@@ -91,17 +91,9 @@ export const TravelForm = () => (
               />
             </div>
             <div className="col-12">
-              <div className="row">
-                <div className="col-md-5">
-                </div>
-                <div className="col-md-5">
-                </div>
-              </div>
-            </div>
-            <div className="col-12">
               <SimpleDatePicker/>
             </div>
-            <div className="col-4">
+            <div className="col-12 col-md-4 col-lg-4 col-xl-4">
               <button type="submit" class="btn button-primary">
                 Rezervasyon Yap
               </button>
