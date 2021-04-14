@@ -53,9 +53,7 @@ export const FAQ = () => {
   const [FAQS, setFAQS] = useState([
     {
       title: "Deniz Taksi Nedir?",
-      answer: `Exercitation in fugiat est ut ad ea cupidatat ut in cupidatat
-       occaecat ut occaecat consequat est minim minim esse tempor laborum
-       consequat esse adipisicing eu reprehenderit enim.`,
+      answer: `Deniz Taksi, İstanbul Boğazı ve Adalar'da iskelesi olan her yere, sadece size ve konuklarınıza özel 10 kişilik katamaran tipi dört mevsim güvenli yolculuk sağlayan araçlarla 7/24 en hızlı ve konforlu ulaşım sunuyor.`,
     },
     {
       title: "Deniz Taksi Güvenli midir?",

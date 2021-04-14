@@ -10,16 +10,18 @@ const Styles = styled.div`
 }
   .react-datepicker-wrapper input {
     margin: 0 0 10px 0;
-    height: 45px;
+    height: 48px;
     width: 100%;
     padding: 0 12px;
     border: 1px solid #f0f0f0;
     border-radius: 8px;
     text-align: left;
-    letter-spacing: 0.3px;
     background: #f0f0f0;
     color: #4a536b;
     position: relative;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
   }
 
   .react-datepicker {
@@ -27,8 +29,7 @@ const Styles = styled.div`
   }
 
   .text {
-    padding-top: 10px;
-    padding-left: 5px;
+    padding: 10px 0;
     color: #4a536b;
     font-weight: bold;
   }
@@ -40,7 +41,7 @@ export const SimpleDatePicker = () => {
   return (
     <Styles>
       <div className="row">
-        <div className="col-6">
+        <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6">
           <div className="text">Gidiş Tarihi</div>
           <DatePicker
             selected={startDate}
@@ -50,7 +51,7 @@ export const SimpleDatePicker = () => {
             endDate={endDate}
           />
         </div>
-        <div className="col-6">
+        <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6">
         <div className="text">Dönüş Tarihi</div>
           <DatePicker
             selected={endDate}

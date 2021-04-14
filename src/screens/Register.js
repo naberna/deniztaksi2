@@ -137,13 +137,13 @@ export const Register = () => (
       <div className="row register">
         <div className="col-12 col-md-7 col-lg-7 col-xl-7">
           <form>
-            <h4 className="title">ÜYE OL</h4>
+            <h4 className="title">KAYIT OL</h4>
             <div className="row">
               <div className="col-12 col-md-6 col-lg-6 col-xl-6">
                 <input
                   type="text"
                   className="form-control"
-                  placeholder="Adınız Soyadınız *"
+                  placeholder="Kullanıcı Adı *"
                   required
                 />
               </div>
@@ -151,7 +151,7 @@ export const Register = () => (
                 <input
                   type="text"
                   className="form-control"
-                  placeholder="TC Kimlik No *"
+                  placeholder="E-mail *"
                   required
                 />
               </div>
@@ -159,7 +159,7 @@ export const Register = () => (
                 <input
                   type="text"
                   className="form-control"
-                  placeholder="Eposta Adresiniz *"
+                  placeholder="İsim *"
                   required
                 />
               </div>
@@ -167,7 +167,8 @@ export const Register = () => (
                 <input
                   type="text"
                   className="form-control"
-                  placeholder="Adres Bilgisi"
+                  placeholder="Soyisim *"
+                  required
                 />
               </div>
               <div className="col-12 col-md-6 col-lg-6 col-xl-6">
@@ -180,10 +181,9 @@ export const Register = () => (
               </div>
               <div className="col-12 col-md-6 col-lg-6 col-xl-6">
                 <input
-                  type="password"
+                  type="text"
                   className="form-control"
-                  placeholder="Şifre Tekrar *"
-                  required
+                  placeholder="Telefon"
                 />
               </div>
               <div className="col-12 check-box">
@@ -221,7 +221,7 @@ export const Register = () => (
                 <div className="row">
                   <div className="col-6">
                     <button type="button" className="btn button-primary register">
-                      ÜYE OL
+                      KAYIT OL
                     </button>
                   </div>
                   <div className="col-6">

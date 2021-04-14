@@ -1,5 +1,6 @@
 {
   "name": "deniz-taksi",
+  "proxy": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -8,6 +9,7 @@
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",
+    "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
     "jquery": "^3.6.0",
     "mdbreact": "^5.0.1",
@@ -29,6 +31,7 @@
     "react-scroll": "^1.8.2",
     "react-slick": "^0.28.1",
     "reactstrap": "^8.9.0",
+    "redux-thunk": "^2.3.0",
     "rsuite": "^4.9.3",
     "simple-react-footer": "^1.0.2",
     "slick-carousel": "^1.8.1",

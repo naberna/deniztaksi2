@@ -1,13 +1,17 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from 'react-redux';
 import {
   AiOutlineInstagram,
   AiOutlineFacebook,
   AiOutlineYoutube,
 } from "react-icons/ai";
 import { SiGmail } from "react-icons/si";
+import { signin } from "../actions/userActions";
+import LoadingBox from '../components/LoadingBox';
+import MessageBox from '../components/MessageBox';
 
 const Styles = styled.div`
   padding: 20px 0 40px 0;
@@ -108,50 +112,85 @@ const Styles = styled.div`
     transform: scale(1.1);
   }
 `;
-export const Signin = () => (
+export default function Signin(props) {
+
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+
+  const redirect = props.location.search? props.location.search.split('=')[1]: '/';
+
+  const userSignin = useSelector((state) => state.userSignin);
+  const { userInfo, loading, error } = userSignin;
+
+  const dispatch = useDispatch();
+  const submitHandler = (e) => {
+    e.preventDefault();
+    dispatch(signin(username, password));
+  };
+
+  useEffect(() => {
+    if(userInfo) {
+      props.history.push(redirect);
+    }
+  }, [props.history, redirect, userInfo]);
+
+  return (
   <Styles>
     <Container>
       <div className="row signin">
         <div className="col-12 col-md-7 col-lg-7 col-xl-7">
-          <form>
+          <form onSubmit={submitHandler}>
             <h4 className="title">GİRİŞ YAP</h4>
+            {loading && <LoadingBox></LoadingBox>}
+            {error && <MessageBox variant="danger">{error}</MessageBox>}
             <div className="row">
               <div className="col-12 col-md-6 col-lg-6 col-xl-6">
                 <input
+                  id="username"
                   type="text"
                   className="form-control"
-                  placeholder="Eposta"
+                  placeholder="Kullanıcı Adı"
                   required
+                  onChange ={ e => setUsername(e.target.value)}
                 />
               </div>
               <div className="col-12 col-md-6 col-lg-6 col-xl-6">
                 <input
+                  id="password"
                   type="password"
                   className="form-control"
                   placeholder="Şifre"
+                  required
+                  onChange ={ e => setPassword(e.target.value)}
                 />
               </div>
-              <div className="col-12">
+              <div className="col-12 col-md-12 col-lg-12 col-xl-12">
                 <div className="row">
-                  <div className="col-6">
-                    <button type="button" className="btn button-second register">
+                  <div className="col-12 col-md-6 col-lg-6 col-xl-6">
+                    <button type="submit" className="btn button-second register">
                       GİRİŞ YAP
                     </button>
+                    <span className="info">Şifremi Unuttum?</span>
+                  </div>
+                  <div className="col-12 col-md-6 col-lg-6 col-xl-6">
+                    <Link to="/register" className="btn button-primary register">
+                      KAYIT OL
+                    </Link>
                     <span className="info">Şifremi Unuttum?</span>
                   </div>
                 </div>
               </div>
               <div className="col-12 social">
-                <Link href="/" className="facebook">
+                <Link to="/" className="facebook">
                   <AiOutlineFacebook />
                 </Link>
-                <Link href="/" className="youtube">
+                <Link to="/" className="youtube">
                   <AiOutlineYoutube />
                 </Link>
-                <Link href="/" className="instagram">
+                <Link onTouchCancelCapture="/" className="instagram">
                   <AiOutlineInstagram />
                 </Link>
-                <Link href="/" className="gmail">
+                <Link to="/" className="gmail">
                   <SiGmail />
                 </Link>
               </div>
@@ -161,4 +200,5 @@ export const Signin = () => (
       </div>
     </Container>
   </Styles>
-);
+  );
+}

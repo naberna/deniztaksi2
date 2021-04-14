@@ -1,17 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Home } from './screens/Home';
 import { About } from './screens/About';
 import { Contact } from './screens/Contact';
 import { NoMatch } from './screens/NoMatch';
-import { NavigationBar } from './components/NavigationBar';
+import NavigationBar from './components/NavigationBar';
 import { Jumbotron } from './components/Jumbotron';
 import FooterPage from './components/Footer';
 import { Register } from './screens/Register';
-import { Signin } from './screens/Signin';
+import Signin from './screens/Signin';
 
-class App extends Component {
-  render() {
+function App() {    
     return (
       <React.Fragment>
         <Router>
@@ -29,8 +28,7 @@ class App extends Component {
           <FooterPage />
         </Router>
       </React.Fragment>
-    );
+   );
   }
-}
-
-export default App;
+  
+  export default App;

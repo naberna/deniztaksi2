@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
+import { Container, Nav, Navbar } from "react-bootstrap";
 import styled from "styled-components";
 import logo from "../assets/logo.png";
-import { CgProfile } from "react-icons/cg";
+import { useDispatch, useSelector } from "react-redux";
+import { signout } from '../actions/userActions';
 
 const Styles = styled.div`
   .navbar {
@@ -26,43 +27,64 @@ const Styles = styled.div`
     height: 65px;
   }
 
-  .navbar-nav .text {
-    padding-top: 23px;
+  .nav-link {
+    padding: 0;
+  }
+
+  .navbar-nav,
+  .navbar-nav a {
+    align-items: center;
+  }
+
+  .btn{
+    color: #fff;
+    padding-top: 11px;
+  }
+
+  .btn:hover{
+    color: #fff;
   }
 
   .dropdown {
-    font-size: 40px;
+    display: inline-block;
+    position: relative;
   }
 
-  .dropdown-toggle::after {
-    font-size: 20px;
+  .dropdown-content {
+    position: absolute;
+    display: none;
+    right: 0;
+    min-width: 12rem;
+    padding: 1rem;
+    z-index: 1;
+    background-color: black;
+    margin: 0;
+    margin-top: 0.4rem;
+    border-radius: 0.5rem;
   }
 
-  .dropdown-menu.show {
-    display: grid;
-    padding: 10px;
-  }
-
-  .dropdown a:focus {
-    background-color: #f0f0f0;
+  .dropdown:hover .dropdown-content {
+    display: block;
   }
 `;
 
-export const NavigationBar = () => {
-  const navDropdownTitle = (<CgProfile/>);
-  const [show, setShow] = useState(false);
-  const showDropdown = (e) => {
-    setShow(!show);
+export default function NavigationBar() {
+
+  const userSignin = useSelector((state) => state.userSignin);
+  const { userInfo } = userSignin;
+
+  const dispatch = useDispatch();
+
+  const signoutHandler = () => {
+    dispatch(signout());
   };
-  const hideDropdown = (e) => {
-    setShow(false);
-  };
+
   return (
     <Styles>
-      <Navbar class="shadow-sm p-3 mb-5 bg-white rounded" expand="lg">
+      <Navbar className="shadow-sm bg-white rounded" expand="lg">
         <Container>
-          <Navbar.Brand href="/">
-            <img src={logo} alt="Logo" />
+          <Navbar.Brand>
+            <Link to="/"><img src={logo} alt="Logo" /></Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
@@ -87,26 +109,35 @@ export const NavigationBar = () => {
                   <Link to="/contact">İletişim</Link>
                 </Nav.Link>
               </Nav.Item>
-              <NavDropdown
-                id="collasible-nav-dropdown"
-                show={show}
-                onMouseEnter={showDropdown}
-                onMouseLeave={hideDropdown}
-                title={navDropdownTitle}
-                alignRight 
-              >
-                <NavDropdown.Item href="/signin">
-                Giriş Yap
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="/register">
-                Kayıt Ol
-                </NavDropdown.Item>
-              </NavDropdown>
+              <Nav.Item className="text">
+                <Nav.Link>
+                  {
+                    userInfo ? (
+                      <div className="dropdown">
+                      <Link to="#">{userInfo.ad} <i className="fa fa-caret-down"></i></Link>
+                      <ul className="dropdown-content">
+                        <Link to="#signout" onClick={signoutHandler}>ÇIKIŞ YAP</Link>
+                      </ul>
+                      </div>) :
+                    (
+                    <Link to="/signin" className="btn button-primary">
+                      Giriş Yap
+                    </Link>
+                    )
+                  }
+                </Nav.Link>
+              </Nav.Item>
+              <Nav.Item className="text">
+                <Nav.Link>
+                  <Link to="/register" className="btn button-second">
+                    Kayıt Ol
+                  </Link>
+                </Nav.Link>
+              </Nav.Item>
             </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
     </Styles>
   );
-};
+}

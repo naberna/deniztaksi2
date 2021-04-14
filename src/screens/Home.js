@@ -52,7 +52,7 @@ export const Home = () => (
         <div className="middle-links">
           <div className="row">
             <div className="col-12 col-md-4 col-lg-4 col-xl-4 middle-link">
-              <Link to="/">Hakkımızda</Link>
+              <Link to="/about">Hakkımızda</Link>
             </div>
             <div className="col-12 col-md-4 col-lg-4 col-xl-4 middle-link">
               <Link to="/stations">Duraklarımız</Link>

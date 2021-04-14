@@ -6,10 +6,10 @@ import {
   USER_SIGNOUT,
 } from '../constants/userConstants';
 
-export const signin = (email, password) => async (dispatch) => {
-  dispatch({ type: USER_SIGNIN_REQUEST, payload: { email, password } });
+export const signin = (username, password) => async (dispatch) => {
+  dispatch({ type: USER_SIGNIN_REQUEST, payload: { username, password } });
   try {
-    const { data } = await Axios.post('/api/users/signin', { email, password });
+    const { data } = await Axios.post('http://demo.deniztaksi.com/GoldemHorn/rest/disServislerWS/loginWS', { username, password });
     dispatch({ type: USER_SIGNIN_SUCCESS, payload: data });
     localStorage.setItem('userInfo', JSON.stringify(data));
   } catch (error) {
@@ -24,6 +24,5 @@ export const signin = (email, password) => async (dispatch) => {
 };
 export const signout = () => (dispatch) => {
   localStorage.removeItem('userInfo');
-  localStorage.removeItem('cartItems');
   dispatch({ type: USER_SIGNOUT });
 };

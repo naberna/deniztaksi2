@@ -108,16 +108,16 @@ const FooterPage = () => {
               <h5 className="sub-title">Sub-Links</h5>
               <ul>
                 <li className="list-unstyled">
-                  <a href="#!">Link 1</a>
+                  <Link to="#!">Link 1</Link>
                 </li>
                 <li className="list-unstyled">
-                  <a href="#!">Link 2</a>
+                  <Link to="#!">Link 2</Link>
                 </li>
                 <li className="list-unstyled">
-                  <a href="#!">Link 3</a>
+                  <Link to="#!">Link 3</Link>
                 </li>
                 <li className="list-unstyled">
-                  <a href="#!">Link 4</a>
+                  <Link to="#!">Link 4</Link>
                 </li>
               </ul>
             </div>
@@ -125,16 +125,16 @@ const FooterPage = () => {
               <h5 className="sub-title">Sub-Links</h5>
               <ul>
                 <li className="list-unstyled">
-                  <a href="#!">Link 1</a>
+                  <Link to="#!">Link 1</Link>
                 </li>
                 <li className="list-unstyled">
-                  <a href="#!">Link 2</a>
+                  <Link to="#!">Link 2</Link>
                 </li>
                 <li className="list-unstyled">
-                  <a href="#!">Link 3</a>
+                  <Link to="#!">Link 3</Link>
                 </li>
                 <li className="list-unstyled">
-                  <a href="#!">Link 4</a>
+                  <Link to="#!">Link 4</Link>
                 </li>
               </ul>
             </div>
@@ -146,12 +146,12 @@ const FooterPage = () => {
           <div className="row">
             <div class="col-6">
               &copy; {new Date().getFullYear()} Copyright{" "}
-              <Link href="deniztaksi.com"> deniztaksi.com </Link>
+              <Link to="deniztaksi.com"> deniztaksi.com </Link>
             </div>
             <div class="col-6 text-right">
-              <Link href="/">SSS</Link>
+              <Link to="/">SSS</Link>
               <span>|</span>
-              <Link href="/">Güvenlik Sözleşmesi</Link>
+              <Link to="/">Güvenlik Sözleşmesi</Link>
             </div>
           </div>
         </Container>
